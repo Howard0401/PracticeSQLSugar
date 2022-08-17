@@ -19,6 +19,7 @@ namespace ConsoleApp111
 
             var DB = SqlSugarHelper.DefaultSingleton;
 
+            // 題號 對照 query_ xxx
             var query_1 = DB
                         .Queryable(DB.Queryable<SC>().Where(sc => sc.CId == "01"),
                                    DB.Queryable<SC>().Where(sc => sc.CId == "02"),
@@ -190,7 +191,7 @@ namespace ConsoleApp111
                 Console.WriteLine($"query_10 SId= {query_10[i].SId}, {query_10[i].SName}");
             }
 
-
+          
 
             var q12sub = DB.Queryable<SC>()
                             .Where(sc => sc.SId == "01")
@@ -339,6 +340,7 @@ namespace ConsoleApp111
                                   $"Score= {query_22[i].Score}, " +
                                   $"Rank= {query_22[i].Rank}");
             }
+
 
 
             var query_27 = DB.Queryable<SC>()
